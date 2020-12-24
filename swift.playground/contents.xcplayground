@@ -3,5 +3,6 @@
     <pages>
         <page name='hello_world'/>
         <page name='view'/>
+        <page name='leetcode_2sums'/>
     </pages>
 </playground>
