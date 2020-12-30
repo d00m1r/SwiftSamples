@@ -25,5 +25,5 @@ class Solution {
 var nums = [3,3,2]//на выходе получаем не (0,2), а (1,2)
 var target = 5
 var some = Solution()
-print("result:",some.twoSum(nums, target))
+print("result: "some.twoSum(nums, target))
 //: [Next](@next)
