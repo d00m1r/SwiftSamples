@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225F40C125A781A000F5C2D3 /* xibViewSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225F40C025A781A000F5C2D3 /* xibViewSample.xib */; };
+		225F40C425A781AA00F5C2D3 /* xibViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F40C325A781AA00F5C2D3 /* xibViewSample.swift */; };
 		22CBFC82256A907800A806F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBFC81256A907800A806F8 /* AppDelegate.swift */; };
 		22CBFC84256A907800A806F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBFC83256A907800A806F8 /* SceneDelegate.swift */; };
 		22CBFC86256A907800A806F8 /* TapButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBFC85256A907800A806F8 /* TapButtonViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225F40C025A781A000F5C2D3 /* xibViewSample.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xibViewSample.xib; sourceTree = "<group>"; };
+		225F40C325A781AA00F5C2D3 /* xibViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xibViewSample.swift; sourceTree = "<group>"; };
 		22CBFC7E256A907800A806F8 /* testUIkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testUIkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CBFC81256A907800A806F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CBFC83256A907800A806F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				22CBFC97256AC54400A806F8 /* cicrleView.swift */,
 				22D7F6A525721B900088C681 /* VCLLoggingViewController.swift */,
 				22CBFC87256A907800A806F8 /* Main.storyboard */,
+				225F40C325A781AA00F5C2D3 /* xibViewSample.swift */,
+				225F40C025A781A000F5C2D3 /* xibViewSample.xib */,
 				22CBFC8A256A907C00A806F8 /* Assets.xcassets */,
 				22CBFC8F256A907C00A806F8 /* Info.plist */,
 			);
@@ -149,6 +155,7 @@
 			files = (
 				22CBFC8E256A907C00A806F8 /* LaunchScreen.storyboard in Resources */,
 				22CBFC8B256A907C00A806F8 /* Assets.xcassets in Resources */,
+				225F40C125A781A000F5C2D3 /* xibViewSample.xib in Resources */,
 				22CBFC89256A907800A806F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +174,7 @@
 				22D7F6AF25757A590088C681 /* CoreAnimationViewController.swift in Sources */,
 				22CBFC82256A907800A806F8 /* AppDelegate.swift in Sources */,
 				22CBFC9B256F0ED300A806F8 /* MyTableViewController.swift in Sources */,
+				225F40C425A781AA00F5C2D3 /* xibViewSample.swift in Sources */,
 				22CBFC84256A907800A806F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

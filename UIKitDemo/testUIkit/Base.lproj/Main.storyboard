@@ -39,6 +39,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLo-1T-nTI" customClass="xibViewSample" customModule="testUIkit" customModuleProvider="target">
+                                <rect key="frame" x="67" y="238" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="64"/>
+            <point key="canvasLocation" x="109.59999999999999" y="63.418290854572717"/>
         </scene>
         <!--Table-->
         <scene sceneID="EoB-o8-pb0">
@@ -89,10 +94,6 @@
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4Jm-0c-RsO" id="gfj-cc-8SM"/>
-                            <outlet property="delegate" destination="4Jm-0c-RsO" id="lMZ-jX-LPa"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Table" id="R0x-WJ-sEZ"/>
                     <connections>
@@ -132,9 +133,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Bd-Pq6">
-                                <rect key="frame" x="68" y="66" width="165" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Bd-Pq6">
+                                <rect key="frame" x="129" y="281.5" width="117" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -142,6 +142,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4a9-fv-jeI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5ny-Bd-Pq6" firstAttribute="centerY" secondItem="7eu-5I-DgV" secondAttribute="centerY" id="42n-hD-KBf"/>
+                            <constraint firstItem="5ny-Bd-Pq6" firstAttribute="centerX" secondItem="7eu-5I-DgV" secondAttribute="centerX" id="CXT-dW-FyY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SomeTitle" id="Xep-cK-Ib2"/>
                     <connections>
@@ -174,7 +178,7 @@
         <!--animate-->
         <scene sceneID="cZg-aZ-diw">
             <objects>
-                <viewController title="animate" id="HFW-4F-cgl" customClass="CoreAnimationViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="animate" id="HFW-4F-cgl" customClass="CoreAnimationViewController" customModule="testUIkit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Hx-U0-7je">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
