@@ -47,7 +47,7 @@ class SimpleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
+    override func awakeFromNib() {//полностью загружено и инициализирована, настроены IBOutlets & IBActions, родительскому view необходимо сделать какие-либо дополнительные настройки
         print("awakeFromNib()")
         super.awakeFromNib()
     }
