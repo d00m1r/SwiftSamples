@@ -105,7 +105,6 @@ class SimpleView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         print("draw()")
-        
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(UIColor.red.cgColor)
             context.setStrokeColor(UIColor.black.cgColor)
