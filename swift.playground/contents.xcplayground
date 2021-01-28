@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true'>
     <pages>
+        <page name='GCD_DispatchWorkItem'/>
         <page name='GCD_loadImageFromInternet'/>
         <page name='functionalElementsInSwift'/>
         <page name='simpleMutex'/>
@@ -12,5 +13,6 @@
         <page name='leetcode_binary_search'/>
         <page name='leetcode_4sums'/>
         <page name='test'/>
+        <page name='GCD_asyncAfter'/>
     </pages>
 </playground>
