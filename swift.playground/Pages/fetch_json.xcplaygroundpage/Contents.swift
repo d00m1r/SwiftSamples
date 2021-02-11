@@ -124,8 +124,9 @@ struct Response: Codable//Использование вложенных типо
         var first_name: String
         var last_name: String
     }
-    var users: [User]
+    var users: [User]?
 }
+
 func encode(){//в случае, если бы у нас просто был массив объектов User в JSON, то .. .decode([User].self, from..)
     guard let jsonData = jsonStringComplex.data(using: .utf8) else { return }
     guard let response = try? JSONDecoder().decode(Response.self, from: jsonData)
@@ -133,7 +134,9 @@ func encode(){//в случае, если бы у нас просто был м�
         print("error: can't parse info")
         return
     }
-    for user in response.users {
+    guard response.users != nil else {print("nil")
+        return}
+    for user in response.users! {
         print(user.first_name, user.last_name)
     }
 }

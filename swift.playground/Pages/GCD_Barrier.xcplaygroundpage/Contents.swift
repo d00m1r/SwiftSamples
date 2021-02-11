@@ -29,6 +29,7 @@ class SafeArr<T> {
         return result
     }
 }
+
 var arrSafe = SafeArr<Int>()
 DispatchQueue.concurrentPerform(iterations: 10) { (index) in
     arrSafe.append(index)
