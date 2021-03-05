@@ -13,7 +13,7 @@ extension Array{
     }
 }
 
-func bubbleSort (arr: [Int])->[Int]{//O(n^2)
+func bubbleSort (_ arr: [Int])->[Int]{//O(n^2)
     let size = arr.count
     var out = arr
     guard !(size < 2) else { return arr }
@@ -28,7 +28,8 @@ func bubbleSort (arr: [Int])->[Int]{//O(n^2)
     return out
 }
 
-func countingSort (arr: [Int])->[Int]{//O(n), но только с целыми num >=0 и создаются доп массивы
+//подсчет элементов в массиве
+func countingSort (_ arr: [Int])->[Int]{//O(n), но только с целыми num >=0 и создаются доп массивы
     guard !arr.isEmpty else { return [] }
     let maxValue = arr.max()!
     let minValue = arr.min()!
@@ -45,19 +46,52 @@ func countingSort (arr: [Int])->[Int]{//O(n), но только с целыми 
     }
     return out
 }
-func quickSort (arr:[Int])->[Int]{//O(n*logn) in best case~middle case
+
+//делим на 2 части: по аналогии с insertionSort
+func selectionSort (_ arr:[Int])->[Int]{//O(n^2)
+    let size = arr.count
+    var out = arr
+    guard !(size < 2) else { return arr }
+    for elem in 0..<size{//поиск по минимуму
+        var index = elem
+        while index < size - 1{
+            index += 1
+            if out[elem] > out[index]{
+                out.mySwap(elem, index)
+            }
+        }
+    }
+    return out
+}
+
+//делим на 2 части: отсортированное начало и последующий массив
+func insertionSort(_ arr:[Int])->[Int]{//O(n^2)
+    guard !(arr.count < 2) else { return arr }
+    var out = arr
+    for elem in 1..<arr.count{
+        //var insertionItem = out[index]
+        var index = elem
+        while index > 0 && out[index] < out[index-1] {
+            out.mySwap(index, index-1)
+            index -= 1
+        }
+    }
+    return out
+}
+
+func quickSort (_ arr:[Int])->[Int]{//O(n*logn) in best case~middle case
     //O(n^2) in bad case
     guard !(arr.count < 2) else { return arr }
     let selectedItem = arr[0]
     let less = arr[1..<arr.count].filter { $0 <= selectedItem }
     let greater = arr[1..<arr.count].filter { $0 > selectedItem }
-    return quickSort(arr: less) + [selectedItem] + quickSort(arr: greater)
+    return quickSort(less) + [selectedItem] + quickSort(greater)
 }
 
-func mergeSort (arr:[Int])->[Int]{//O(n*logn), расходы на память
+func mergeSort (_ arr:[Int])->[Int]{//O(n*logn), расходы на память
     guard !(arr.count < 2) else { return arr }
     let half = Int(arr.count/2)
-    return merge(mergeSort(arr: Array(arr[0..<half])),mergeSort(arr: Array(arr[half..<arr.count])))
+    return merge(mergeSort(Array(arr[0..<half])),mergeSort(Array(arr[half..<arr.count])))
 }
 func merge(_ arr1:[Int],_ arr2:[Int]) ->[Int]{
     guard !arr1.isEmpty else { return arr2 }
@@ -68,10 +102,12 @@ func merge(_ arr1:[Int],_ arr2:[Int]) ->[Int]{
         return [arr2[0]] + merge(arr1, Array(arr2[1..<arr2.count]))
     }
 }
-print("BubbleSort: \(bubbleSort(arr: arr))")
-print("CountingSort: \(countingSort(arr: arrPositive))")
-print("QuickSort: \(quickSort(arr: arr))")
-print("MergeSort: \(mergeSort(arr: arr))")
+print("BubbleSort: \(bubbleSort(arr))")
+print("SelectionSort: \(selectionSort(arr))")
+print("InsertionSort: \(insertionSort(arr))")
+print("CountingSort: \(countingSort(arrPositive))")
+print("QuickSort: \(quickSort(arr))")
+print("MergeSort: \(mergeSort(arr))")
 //: [Next](@next)
 
 
