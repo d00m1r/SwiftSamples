@@ -36,7 +36,7 @@ class DispatchWorkItem2 {
         }
         
         queue.async {
-            workItem.cancel()
+            //workItem.cancel()
             sleep(4)
             print("execute Task 1", Thread.current)
         }

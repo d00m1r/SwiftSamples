@@ -32,7 +32,6 @@ class SimpleView: UIView {
         bringSubviewToFront(anotherView)
         
         anotherView.removeFromSuperview()
-        
         greenSubview.backgroundColor = .green
         tintSubview.backgroundColor = tintColor
         

@@ -2,9 +2,6 @@
 
 import Foundation
 
-var arr = [99,11,1,2,3,7,0,-100,101,102,103,100,17,-1,1]
-var arrPositive = [99,11,12,35,7,7,7,100,17]
-
 extension Array{
     mutating func mySwap(_ i: Int, _ j: Int) {
         let t = self[i]
@@ -102,12 +99,42 @@ func merge(_ arr1:[Int],_ arr2:[Int]) ->[Int]{
         return [arr2[0]] + merge(arr1, Array(arr2[1..<arr2.count]))
     }
 }
-print("BubbleSort: \(bubbleSort(arr))")
-print("SelectionSort: \(selectionSort(arr))")
-print("InsertionSort: \(insertionSort(arr))")
-print("CountingSort: \(countingSort(arrPositive))")
-print("QuickSort: \(quickSort(arr))")
-print("MergeSort: \(mergeSort(arr))")
+
+enum Sortings:CaseIterable{
+    case bubble
+    case selection
+    case insertion
+    case counting
+    case quick
+    case merge
+    
+    func sort(_ arr: [Int]){
+        switch self {
+        case .bubble:
+            print("BubbleSort: \(bubbleSort(arr))")
+        case .selection:
+            print("SelectionSort: \(selectionSort(arr))")
+        case .insertion:
+            print("InsertionSort: \(insertionSort(arr))")
+        case .counting:
+            print("CountingSort: \(countingSort(arr))")
+        case .quick:
+            print("QuickSort: \(quickSort(arr))")
+        case .merge:
+            print("MergeSort: \(mergeSort(arr))")
+        }
+    }
+}
+var arr = [99,11,1,2,3,7,0,-100,101,102,103,100,17,-1,1]
+var arrPositive = [99,11,12,35,7,7,7,100,17]
+
+for sort in Sortings.allCases{
+    guard sort != .counting else { continue }
+    sort.sort(arr)
+}
+var someSort = Sortings.counting
+someSort.sort(arrPositive)
+
 //: [Next](@next)
 
 

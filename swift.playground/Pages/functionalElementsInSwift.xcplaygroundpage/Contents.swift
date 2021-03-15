@@ -28,7 +28,7 @@ var dic = arr3.reduce(into: [Int:String]()) { res, item in
 
 var res4 = arr3.filter {$0 > 5}
 var index = arr3.firstIndex(of: 1)
-var element = arr3.first {$0 > 5}
-
+var element = arr3.first {$0 > 15}
+print(res4, index ?? "empty", element ?? "empty")
 arr3.forEach {print($0)}
 //: [Next](@next)
